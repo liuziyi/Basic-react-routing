@@ -1,0 +1,6 @@
+export default {
+
+	MOVIES_RECEIVED: 'MOVIES_RECEIVED',
+	MOVIE_CREATED: 'MOVIE_CREATED'
+
+}
