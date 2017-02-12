@@ -51,7 +51,7 @@ class Movies extends Component {
 							return (
 								<li key={movie._id}>
 									<div>
-										<h4><Link to={"/"+movie.title}>{movie.title}</Link></h4>
+										<h4><Link to={"/"+movie.id}>{movie.title}</Link></h4>
 									</div>
 								</li>
 							)

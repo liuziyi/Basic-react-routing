@@ -4,13 +4,27 @@ import actions from '../../actions'
 
 class MovieDetails extends Component {
 	render(){
+		
 		const movies = this.props.movies || []
-		const title = this.props.params.title
+		const id = this.props.params.id
 		
 		return(
 			<div>
-				<h1>{this.props.params.title}</h1>
-				<hr/>
+				<div>
+					{
+						movies.map((movie,i) => {
+							if(movie.id == id){
+								return (
+									<div key={movie._id}>
+										<h1 className="text-center">{movie.title}</h1>
+										<hr />
+										<p>Year: {movie.year}</p>
+									</div>
+								)
+							}
+						})
+					}
+				</div>
 			</div>
 		)
 	}
